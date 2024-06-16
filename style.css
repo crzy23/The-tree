@@ -1,0 +1,83 @@
+.{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blue;
+    background: linear-gradient(#eae5df,#d6ccc0);
+}
+ul.tree{
+    width: 180px;
+    margin: auto;
+    padding-top: 48px;
+    
+ul li{
+    position: relative;
+    list-style: none;
+    color: black;
+}
+    
+}
+li:before, li:after{
+    content: normal;
+    position: absolute;
+    left: 28px;
+}
+li:before{
+    height: 1px;
+    width: 16x;
+    top: 12;
+}
+li:after{
+    height: 26px;
+    width: 1px;
+    top: -14px;
+}
+li.parent:after{
+    height: 100%;
+    top: 12px;
+}
+li.parent:last-child:after{
+    content: none;
+}
+details{
+    margin: 0 auto;
+    max-height: 18px;
+    transition: max-height is linear;
+}
+details[open]{
+    max-height: 1000px;
+    color: green;
+    font-size: x-large;
+}
+summary{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    color: green;
+    padding: 10px;
+}
+summary:before {
+    content: normal;
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: 0;
+    left: -22px;
+    text-align: center;
+    line-height: 18px;
+    background-color: beige;
+    border-radius: 9px;
+}
+details[open] > summary:before{
+    content: normal;
+    background-color: brown;
+}
+details > ul{
+    padding: 20px;
+}
